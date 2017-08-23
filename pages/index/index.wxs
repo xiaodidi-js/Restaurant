@@ -1,0 +1,213 @@
+var options = [
+  {
+    "id": 1,
+    "tree": {
+      "id": 26,
+      "name": "蔬菜菌菇",
+      "shotcut": "http://file.green-f.cn/2017/07/10/02/58/27/upload_489de148d522812201779ddacdc00a84.jpg",
+      "tag": "",
+      "nodes": [
+        {
+          "id": 157,
+          "tree": {
+            "id": 157,
+            "title": "本地菜心",
+            "price": "5.8",
+            "logo": "http://file.green-f.cn/2017/07/10/01/04/44/upload_affff90ec8720374ddffba4e426f5393.jpg",
+            "popular": 157,
+            'num': 0,
+            
+            'guige': [
+              {
+                'id': 1,
+                'name': '加快乐',
+              },
+              {
+                'id': 2,
+                'name': '加雪碧',
+              },
+              {
+                'id': 3,
+                'name': '加煎蛋',
+              },
+              {
+                'id': 4,
+                'name': '单品',
+              }
+            ],
+            "nodes": null
+          }
+        },
+        {
+          "id": 158,
+          "tree": {
+            "id": 158,
+            "title": "榨菜肉丝饭",
+            "price": "5.8",
+            "logo": "http://file.green-f.cn/2017/07/15/05/57/51/upload_17a16366aea41b152328ba0338c80c20.jpg",
+            "popular": 157,
+            'guige': [
+              {
+                'id': 1,
+                'name': '加快乐',
+              },
+              {
+                'id': 2,
+                'name': '加雪碧',
+              },
+            ],
+            "nodes": null
+          }
+        },
+        {
+          "id": 157,
+          "tree": {
+            "id": 157,
+            "title": "榨菜肉丝饭",
+            "price": "6.8",
+            "logo": "http://file.green-f.cn/2017/08/14/08/44/23/upload_8b8c9cd045e74a2ee2e2f0e0860f4b2a.jpg",
+            "popular": 157,
+            'num': 0,
+            "nodes": null
+          }
+        },
+        {
+          "id": 158,
+          "tree": {
+            "id": 158,
+            "title": "榨菜肉丝饭",
+            "price": "8.8",
+            "logo": "http://file.green-f.cn/2017/07/14/07/58/20/upload_2f50806432ca6cca0edf55adeb35f83a.jpg",
+            "popular": 157,
+            'num': 0,
+            "nodes": null
+          }
+        },
+      ]
+    },
+  },
+  {
+    "id": 2,
+    "tree": {
+      "id": 27,
+      "name": "瓜茎豆荚",
+      "shotcut": "http://file.green-f.cn/2017/06/13/03/20/16/upload_3f10760bb5e2677f2b8fd39ce9cb4489.jpg",
+      "tag": "",
+      "nodes": [
+        {
+          "id": 158,
+          "tree": {
+            "id": 158,
+            "title": "青瓜",
+            "price": "5.8",
+            "logo": "http://file.green-f.cn/2017/07/25/10/16/14/upload_e91fb5f84afa71c4fcb56da73abf9385.jpg",
+            "popular": 157,
+            'num': 0,
+            "nodes": null
+          }
+        },
+        {
+          "id": 159,
+          "tree": {
+            "id": 158,
+            "title": "黄瓜",
+            "price": "50",
+            "logo": "http://file.green-f.cn/2017/07/21/07/18/02/upload_693931672dd8f79c2aea0e9f462fbcb3.jpg",
+            "popular": 157,
+            'num': 0,
+            "nodes": null
+          }
+        },
+      ]
+    },
+  },
+  {
+    "id": 23,
+    "tree": {
+      "id": 23,
+      "name": "缤纷水果",
+      "shotcut": "http://file.green-f.cn/2017/08/08/07/54/20/upload_f913d48b61313d43c35529d970161330.jpg",
+      "tag": "",
+      "nodes": [
+        {
+          "id": 157,
+          "tree": {
+            "id": 157,
+            "title": "释迦",
+            "price": "28",
+            "logo": "http://file.green-f.cn/2017/07/27/00/42/53/upload_5421242ae80720a349592db88f99013c.jpg",
+            "popular": 157,
+            'num': 0,
+            "nodes": null
+          }
+        },
+      ]
+    },
+  },
+  {
+    "id": 25,
+    "tree": {
+      "id": 25,
+      "name": "猪牛羊肉",
+      "shotcut": "http://file.green-f.cn/2017/06/13/03/20/30/upload_9f2c3f7fc28a5da49005adbef3ce9d73.jpg",
+      "tag": "2",
+      "nodes": []
+    },
+  },
+  {
+    "id": 20,
+    "tree": {
+      "id": 20,
+      "name": "熟食面点",
+      "shotcut": "http://file.green-f.cn/2017/06/13/03/20/58/upload_6eef7557c125515cc07dba2afaa45fe4.jpg",
+      "tag": "2",
+      "nodes": []
+    },
+  },
+  {
+    "id": 24,
+    "tree": {
+      "id": 24,
+      "name": "海鲜水产",
+      "shotcut": "http://file.green-f.cn/2017/06/13/03/20/42/upload_661caf44bf86db3776ce06c48232edd7.jpg",
+      "tag": "2",
+      "nodes": []
+    },
+  },
+  {
+    "id": 21,
+    "tree": {
+      "id": 21,
+      "name": "有汁有味",
+      "shotcut": "http://file.green-f.cn/2017/08/16/09/59/32/upload_10cecfbfaab1026a4bb5d678045d45d8.jpg",
+      "tag": "2",
+      "nodes": []
+    },
+  },
+  {
+    "id": 31,
+    "tree": {
+      "id": 31,
+      "name": "滋润汤料",
+      "shotcut": "http://file.green-f.cn/2017/08/17/07/04/52/upload_3e42402acd3c33e88ee8dd1f78d0937b.jpg",
+      "tag": "2",
+      "nodes": []
+    },
+  }
+];
+
+//  轮播图
+var imgUrls = [
+  {
+    url: 'http://file.green-f.cn/2017/08/21/00/47/22/upload_dc30a7d8fab99d6de59a162de23adf19.jpg',
+  },
+  {
+    url: 'http://file.green-f.cn/2017/08/19/07/49/45/upload_5de1963c7f23d5ab36a9f808e7e82800.jpg',
+  }
+];
+
+
+module.exports = {
+  options: options,
+  imgUrls: imgUrls,
+};

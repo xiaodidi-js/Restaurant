@@ -1,0 +1,70 @@
+/* address.wxss */
+
+view {
+  font-family: 'Microsoft Yahei';
+}
+
+/* callPerson start */
+
+.callPerson .call_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #9fa0a0;
+  margin-left: 15px;
+}
+
+.callPerson .form {
+  background: #fff;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 15px;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.callPerson .form .left-label {
+  width: 25%;
+}
+
+.callPerson .form .right-label {
+  height: 40px;
+  width: 70%;
+}
+
+.callPerson .form .right-label .radio-group .radio {
+  margin: 0px 10px 0px 0px;
+}
+
+.callPerson .form .right-label .thisText {
+  height: 35px;
+  margin-top: 3px;
+  font-family: 'Microsoft Yahei';
+}
+
+.callPerson .form .right-label .picker {
+  line-height: 42px;
+  width: 88%;
+  height: 40px;
+  overflow: hidden;
+}
+
+.callPerson .form .right-label .picker::before {
+  content: '\e61f';
+  color: #00c367;
+}
+
+.callPerson .form .right-label .icon-youbian {
+  color: #9fa0a0;
+}
+
+.callPerson .saveMessage {
+  width: 90%;
+  height: 40px;
+  background: #ff8023;
+  margin: 27.5px auto;
+  color: #fff;
+  line-height: 40px;
+}
+
+/* callPerson end */

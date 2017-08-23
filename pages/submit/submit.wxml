@@ -1,0 +1,111 @@
+<!--submit.wxml-->
+<view class="submit-body">
+  <view class="submit-main">
+    <view class="select-method header-bold f30" bindtap="openChonse">
+      <label class="fl">请选择方式</label>
+      <label class="iconfont icon-youbian fr"></label>
+    </view>
+    <view class="select-method sel-address">
+
+      <view class="words f28">
+        <view class="words-name">
+          <text class="fl">{{ addressJson.region }}</text>
+        </view>
+        <view class="words-con">
+          <text>{{ addressJson.name }}</text>
+          <text>{{ addressJson.gender }}</text>
+          <text>{{ addressJson.telphone }}</text>
+        </view>
+        <image src="../../images/line.png"></image>
+      </view>
+      <view class="thisMessage f24">
+        <view>你的订餐将为在40分钟内送到，如果40分钟内未能送到</view>
+        <text>请致电：</text>
+        <text bindtap="callMe">{{ phoneNumber }}</text>
+      </view>
+
+      <view class="iconfont add-address f28">
+        <text style="font-family: 'Microsoft YaHei';">还没添加配送地址</text>
+        <text class="setup" bindtap="goSeting">点我设置</text>
+        <image src="../../images/line.png"></image>
+      </view>
+    </view>
+
+    <view class="select-method card-box">
+      <view class="maininfo">
+        <view class="img fl" style="width: 25%;height: 75px;">
+          <image src="{{ list.image }}" style="width: 100%;height: 100%;"></image>
+        </view>
+        <view class="msg fl f30">
+          <view class="msg-title fl">{{ list.name }}</view>
+          <view class="msg-money fr">￥{{ list.price }}</view>
+          <view class="msg-doubleX">x1</view>
+        </view>
+      </view>
+
+      <view class="list-commodity f30">
+        <text class="fl">餐盒费</text>
+        <text class="fr" style="color: #595757">￥2</text>
+      </view>
+
+      <view class="list-commodity f30">
+        <text class="fl">配送费</text>
+        <text class="fr" style="color: #595757">￥5</text>
+      </view>
+
+      <view class="count f30">
+        <view class="paid fr">实付
+          <label style="color: #ff8023">￥36</label>
+        </view>
+        <view class="total fr">共计￥36</view>
+      </view>
+    </view>
+
+    <view class="select-method remarks-box">
+      <view class="remarks-title f30">备注：</view>
+      <textarea class="remarks-area" />
+    </view>
+
+    <view class="orderNumber">
+      <view class="words-con f28 nextOrder">
+        <text>小明</text>
+        <text>女士</text>
+      </view>
+      <view class="words-number f30 nextOrder">
+        <text>订单号</text>
+        <text>201708021920</text>
+      </view>
+      <view class="f30 nextOrder">
+        <text>餐桌台号</text>
+        <text>02</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class="payConfirm">
+  <view class="wait-money fl f30">
+    <text>待支付</text>
+    <text style="color: #ff8023;">￥36</text>
+  </view>
+  <button class="goPay fr f30" bindtap="goPay">提交订单</button>
+</view>
+
+
+<!-- 弹出层 -->
+<view class="domStyle" hidden="{{ showpop }}" bindtap="calcelPop"></view>
+<view class="freepop" hidden="{{ showpop }}">
+  <view class="ul-list f30">
+    <view class="li-list">外卖用餐</view>
+    <view class="li-list">到店用餐</view>
+    <view class="li-list cancel-list" bindtap="calcelPop">取消</view>
+  </view>
+</view>
+
+<view class="getIdea" hidden="{{ ideapop }}" style="top: {{ winTop }}px">
+  <text class="f30">请扫餐桌上的二维码 获取您的用餐台号</text>
+</view>
+
+<!-- 弹出层 -->

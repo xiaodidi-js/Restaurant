@@ -1,0 +1,55 @@
+<!--address.wxml-->
+<view class="callPerson">
+  <form bindsubmit="formSubmit">
+    <view class="call_title f26">联系人</view>
+    <view class="form">
+      <view class="left-label fl f26">姓名</view>
+      <view class="right-label fl f26">
+        <input type="text" placeholder="请填写您的姓名" class="thisText" name="myname" />
+      </view>
+    </view>
+
+    <view class="form">
+      <view class="left-label fl f26">性别</view>
+      <view class="right-label fl f26">
+        <radio-group class="radio-group" style="color: #333;" name="gender">
+          <label class="radio" wx:for="{{ items }}">
+            <radio value="{{ item.name }}" checked="false" color="#ff994f" />{{ item.value }}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="form" style="border-bottom: none;">
+      <view class="left-label fl f26">手机</view>
+      <view class="right-label fl f26">
+        <input type="tel" placeholder="请填写您的手机号" class="thisText" name="telphone" />
+      </view>
+    </view>
+
+    <view class="call_title f26">联系地址</view>
+    <view class="form">
+      <view class="left-label fl f26">小区/大厦/学校</view>
+      <view class="right-label fl f26">
+        <picker mode="region" bindchange="bindRegionChange" value="{{ region }}" custom-item="{{customItem}}" name="region">
+          <view class="picker iconfont f26 fl">
+            点击选择：{{region[0]}},{{region[1]}},{{region[2]}}
+          </view>
+          <label class="iconfont icon-youbian fr"></label>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form" style="border-bottom: none;">
+      <view class="left-label fl f26">楼号-门牌号</view>
+      <view class="right-label fl f26">
+        <input type="text" placeholder="例如 ：二座41号" class="thisText" name="homenumber" />
+      </view>
+    </view>
+
+    <button class="saveMessage f30" formType="submit">保存</button>
+
+  </form>
+
+
+</view>

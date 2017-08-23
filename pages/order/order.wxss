@@ -1,0 +1,86 @@
+/* order.wxss */
+
+/* wrapper start */
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  padding: 5px 0px;
+}
+
+.wrapper .card-box {
+  background: #fff;
+  margin: 10px 0px;
+  padding: 0px 10px;
+}
+
+.wrapper .card-box .card-list {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0px;
+  color: #727171;
+}
+
+.wrapper .card-box  .cardMessage {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+  height: 40px;
+  line-height: 20px;
+  display: block;
+}
+
+.wrapper .card-box .bl-wrapper {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #727171;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper .card-box .bl-wrapper .line text {
+  margin: 0 0 0 10px;
+}
+
+.wrapper .card-box .mid-line {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper .card-box .mid-line .imgs {
+  width: 51px;
+  height: 51px;
+  padding: 10px 0px;
+}
+
+.wrapper .card-box .mid-line .card-text {
+  line-height: 70px;
+  margin-left: 10px;
+}
+
+.wrapper .card-box .mid-line .status {
+  line-height: 70px;
+  color: #727171;
+}
+
+.wrapper .card-box .card-footer {
+  width: 100%;
+  height: 40px;
+  padding: 10px 0px;
+}
+
+.wrapper .card-box .card-footer .cardPay {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  color: #898989;
+  position: unset;
+  margin-top: -1px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* wrapper end */

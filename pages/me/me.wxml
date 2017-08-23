@@ -1,0 +1,49 @@
+<!--me.wxml-->
+
+<!-- person-main start -->
+<view class="person-main">
+  <view class="person-header">
+    <view class="psonImage">
+      <image src="../../images/1.png" style="width: 100%;height: 100%;"></image>
+    </view>
+    <view class="psonName f24">小明</view>
+  </view>
+</view>
+<!-- person-main end -->
+
+<!-- pson-body start -->
+<view class="pson-body">
+
+  <view class="pson-util">
+    <!-- 我的订单 -->
+    <view class="pson-util-li" bindtap="goOrder">
+      <label class="iconfont icon-dingdan fl"></label>
+      <view class="util-li-text fl f26">我的订单</view>
+      <label class="iconfont icon-youbian fr f26"></label>
+    </view>
+
+    <!-- 配送地址 -->
+    <view class="pson-util-li" bindtap="goAddress">
+      <label class="iconfont icon-dizhi1 fl"></label>
+      <view class="util-li-text fl f26">配送地址</view>
+      <label class="iconfont icon-youbian fr f26"></label>
+    </view>
+
+    <!-- 客服 -->
+    <view class="pson-util-li">
+      <label class="iconfont icon-dianhua fl"></label>
+      <view class="util-li-text fl f26">
+        <text bindtap="callService">客服电话:{{ aiphone }}</text>
+        <label class="f18 serverTime fr">（服务时间 ： 9：00-23：00）</label>
+      </view>
+      <label class="iconfont icon-youbian fr f26"></label>
+    </view>
+
+    <button class="backLogin f30" bindtap="overPerson">退出账号</button>
+
+  </view>
+</view>
+<!-- pson-body end -->
+
+<import src="../../template/popo/popp.wxml" />
+<template is="popo" data="{{ domShow, confirmHeight, popoH1 }}"></template>

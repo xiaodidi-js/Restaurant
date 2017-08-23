@@ -1,0 +1,15 @@
+<!--popp.wxml-->
+<template name="popo">
+  <!-- 弹出层 -->
+  <view class="domStyle" hidden="{{ domShow }}" bindtap="overDome"></view>
+  <view class="confirm-popo"  hidden="{{ domShow }}" style="top:{{ confirmHeight }}px">
+    <view class="">
+      <view class="popo-h1 f30">{{ popoH1 }}</view>
+      <!-- <view class="popo-h2 f24">{{ popoH2 }}</view> -->
+    </view>
+    <view class="popo-h3">
+      <button class="fl cancel-btn f30" bindtap="cancelEven">取消</button>
+      <button class="fr confirm-btn f30" bindtap="confirmEven">确认</button>
+    </view>
+  </view>
+</template>

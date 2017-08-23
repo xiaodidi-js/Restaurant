@@ -1,0 +1,290 @@
+/* submit-body start */
+
+.submit-body {
+  padding-bottom: 125px;
+  width: 100%;
+  clear: both;
+  z-index: 1;
+}
+
+.submit-body .submit-main {
+  margin: 0px 10px;
+  height: auto;
+}
+
+.submit-body .submit-main .select-method {
+  width: 94%;
+  background: #fff;
+  padding: 0px 10px;
+  clear: both;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-body .submit-main .header-bold {
+  height: 45px;
+  line-height: 45px;
+  color: #595757;
+}
+
+.submit-body .submit-main .sel-address {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.submit-body .submit-main .words {
+  width: 100%;
+  height: 64px;
+  position: relative;
+}
+
+.submit-body .submit-main .words .words-name {
+  width: 100%;
+  height: 30px;
+}
+
+.submit-body .submit-main .words .words-con {
+  width: 100%;
+  height: 30px;
+  clear: both;
+  line-height: 30px;
+  text-align: left;
+  color: #9fa0a0;
+}
+
+.submit-body .submit-main .thisMessage {
+  color: #ffb37b;
+  width: 93%;
+  height: auto;
+  background: #fff;
+  padding: 10px 10px;
+  position: relative;
+  top: 10px;
+}
+
+.submit-body .submit-main .words .words-con text {
+  margin: 0px 10px 0px 0px;
+}
+
+.submit-body .submit-main .words .words-name text {
+  margin: 0px 10px 0px 0px;
+  line-height: 30px;
+}
+
+.submit-body .submit-main .words image {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+}
+
+.submit-body .submit-main .sel-address .add-address {
+  color: #595757;
+  font-family: 'microsoft yahei';
+  position: relative;
+}
+
+.submit-body .submit-main .sel-address .add-address::before {
+  content: '\e61f';
+  margin-right: 5px;
+}
+
+.submit-body .submit-main .sel-address .add-address .setup {
+  color: #22ac38;
+  font-family: 'microsoft yahei';
+  margin-left: 10px;
+}
+
+.submit-body .submit-main .sel-address .add-address image {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+}
+
+.submit-body .submit-main .card-box {
+  background: #fff;
+}
+
+.submit-body .submit-main .card-box .maininfo {
+  width: 100%;
+  height: 80px;
+  padding: 10px 0px 8px;
+  margin: 5px 0px 0px;
+  border-bottom: 1px solid #dedede;
+}
+
+.submit-body .submit-main .card-box .maininfo .msg {
+  margin-left: 10px;
+  position: relative;
+  width: 69%;
+}
+
+.submit-body .submit-main .card-box .list-commodity {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #dedede;
+}
+
+.submit-body .submit-main .card-box .list-commodity:nth-last-child(2) {
+  border: none;
+}
+
+.submit-body .submit-main .card-box .count {
+  margin-top: 8px;
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 5px;
+}
+
+.submit-body .submit-main .card-box .maininfo .msg .msg-doubleX {
+  position: absolute;
+  top: 55px;
+}
+
+.submit-body .submit-main .card-box .count .paid, .total {
+  color: #727171;
+  line-height: 30px;
+}
+
+.submit-body .submit-main .card-box .count .paid {
+  margin-left: 10px;
+}
+
+.submit-body .submit-main .remarks-box {
+  height: auto;
+}
+
+.submit-body .submit-main .remarks-box .remarks-title {
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+}
+
+.submit-body .submit-main .remarks-box .remarks-area {
+  height: 60px;
+  min-height: auto;
+  width: 100%;
+}
+
+.submit-body .orderNumber {
+  width: 90%;
+  padding: 0px 5%;
+  position: relative;
+  top: 10px;
+  background: #fff;
+  height: 95px;
+}
+
+.submit-body .orderNumber .words-con {
+  color: #9fa0a0;
+}
+
+.submit-body .orderNumber .nextOrder text {
+  /* margin: 0px 20px 0px 0px; */
+  text-align: left;
+  line-height: 30px;
+}
+
+.submit-body .orderNumber .nextOrder text:nth-last-child(2) {
+  width: 25%;
+  display: block;
+  float: left;
+}
+
+.submit-body .orderNumber .nextOrder text:nth-last-child(1) {
+  width: 75%;
+  display: block;
+  float: left;
+}
+
+/* submit-body end */
+
+/* payConfirm start */
+
+.payConfirm {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 44.5px;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+
+.payConfirm .wait-money {
+  width: 50%;
+  line-height: 44.5px;
+  padding-left: 6%;
+  border-top: 1px solid #dedede;
+}
+
+.payConfirm .goPay {
+  width: 44%;
+  height: 100%;
+  border: none;
+  border-radius: 0px;
+  line-height: 44.5px;
+  background: #ff8023;
+  color: #fff;
+}
+
+/* payConfirm end */
+
+/* freepop start */
+
+.freepop {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 12;
+  width: 100%;
+}
+
+.freepop .ul-list {
+  width: 100%;
+  text-align: center;
+  color: #595757;
+  background: #fff;
+}
+
+.freepop .ul-list .li-list {
+  height: 42.5px;
+  line-height: 42.5px;
+  border-bottom: 1px solid #dedede;
+}
+
+.cancel-list {
+  background: #f2f2f2;
+}
+
+/* freepop end */
+
+/* getIdea start */
+
+.getIdea {
+  width: 70%;
+  height: 125px;
+  background: #fff;
+  border-radius: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  z-index: 13;
+}
+
+.getIdea text {
+  margin: 10px;
+  padding: 30px;
+  line-height: 23px;
+  display: block;
+  text-align: center;
+}
+
+/* getIdea end */

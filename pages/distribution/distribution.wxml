@@ -1,0 +1,47 @@
+<!--distribution.wxml-->
+
+<!-- topAddressAdmin start -->
+<view class="topAddressAdmin">
+  <label class="fl f30" style="color: #9fa0a0;">我的收货地址</label>
+  <label class="fr f30" bindtap="goChonse">{{ Administration }}</label>
+</view>
+
+<view class="bodyAddressList">
+  <view class="Address-list">
+    <view style="top: 5px;position: relative;" class="psonMessage fl">
+      <label class="f28">顺德家电城</label>
+      <label class="f28">二座41号</label>
+    </view>
+    <view class="f28 psonMessage fl" style="color: #9fa0a0;">
+      <label>恩小猫</label>
+      <label>女士</label>
+      <label>13924809541</label>
+    </view>
+    <view class="fr icon-util" hidden="{{ utilIcon }}">
+      <view class="fl" style="border: 1px solid #ff8023;border-radius: 100%;padding: 0px 2px;" bindtap="goAddAddress">
+        <label class="iconfont icon-bianji"></label>
+      </view>
+      <label class="iconfont icon-shanchu" bindtap="deleteAddress"></label>
+    </view>
+  </view>
+</view>
+
+<!-- topAddressAdmin end -->
+
+<!-- address-icon start -->
+<view class="address-icon" style="top: {{ nothingTop }}px">
+  <label class="iconfont icon-map"></label>
+  <label class="f24 nothing-text">您还没添加配送地址哦~</label>
+</view>
+
+<!-- address-icon end -->
+
+<!-- dist-add start -->
+<view class="dist-add">
+  <button class="iconfont dist-add-address f30" bindtap="goAddAddress">新增收货地址</button>
+</view>
+<!-- dist-add end -->
+
+<!-- 弹出层 -->
+<import src="../../template/popo/popp.wxml" />
+<template is="popo" data="{{ domShow, confirmHeight, popoH1 }}"></template>

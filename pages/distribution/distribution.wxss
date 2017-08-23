@@ -1,0 +1,108 @@
+/* distribution.wxss */
+
+/* topAddressAdmin start */
+
+.topAddressAdmin {
+  width: 90%;
+  height: 40px;
+  background: #fff;
+  line-height: 40px;
+  padding: 0px 5%;
+}
+
+.bodyAddressList {
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+  padding: 0px 5% 0px;
+  background: #fff;
+}
+
+.bodyAddressList .Address-list {
+  height: 70px;
+  line-height: 30px;
+  position: relative;
+}
+
+.bodyAddressList .Address-list .psonMessage {
+  width: 80%;
+  line-height: 30px;
+}
+
+.bodyAddressList .Address-list .icon-util {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+.bodyAddressList .Address-list .icon-util .icon-bianji {
+  color: #ff8023;
+}
+
+.bodyAddressList .Address-list .icon-util .icon-shanchu {
+  padding: 0px 3px;
+  font-size: 35px;
+  color: #ff8023;
+  margin-left: 5px;
+}
+
+.bodyAddressList .Address-list .psonMessage label {
+  margin-right: 10px;
+}
+
+/* topAddressAdmin end */
+
+/* address-icon start */
+
+.address-icon {
+  width: 241px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+}
+
+.address-icon .icon-map {
+  font-size: 100px;
+  width: 100px;
+  height: 100%;
+  margin: 0px auto;
+  display: block;
+  color: rgb(199, 237, 217);
+}
+
+.address-icon .nothing-text {
+  color: #b5b5b6;
+  text-align: center;
+  display: block;
+  margin-top: 35px;
+}
+
+/* address-icon end */
+
+/* dist-add start */
+
+.dist-add {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+
+.dist-add .dist-add-address {
+  height: 45px;
+  line-height: 45px;
+  font-family: 'Microsoft Yahei';
+}
+
+.dist-add .dist-add-address::before {
+  content: '\e68c';
+  margin-right: 10px;
+  color: #ff8023;
+}
+
+/* dist-add end */

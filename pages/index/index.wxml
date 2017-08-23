@@ -1,0 +1,133 @@
+<!-- <wxs src='index.wxs' module='tools' /> -->
+
+<!--index.wxml-->
+<view class="container">
+  <view class="banner">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{ imgUrls }}">
+        <swiper-item>
+          <navigator>
+            <image src="{{ item.url }}" class="slide-image" />
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="search" bindtap="goSearchPage">
+      <view class="iconfont icon-fangdajing"></view>
+      <view class="search-txt f24">请输入关键字</view>
+    </view>
+  </view>
+
+  <view class="table">
+    <view class="table-header">
+      <view class="tab {{ currentTab == 0 ? 'active': '' }}" data-current="0" style="width: 40%" bindtap="selected">点餐</view>
+      <view class="tab {{ currentTab == 1 ? 'active': '' }}" data-current="1" style="width: 60%;" bindtap="selected">商家</view>
+    </view>
+
+    <swiper current="{{ currentTab }}" class="swiper-box" duration="300" style="height:{{ winHeight - 31 }}px" bindchange="bindChange">
+      <swiper-item>
+        <view class="{{ selected ? 'hidden': 'show' }}">
+          <!--左侧栏-->
+          <view class="marTop">
+            <view class="nav_left">
+              <scroll-view class="recommend_scroll_x_box" scroll-y style="height:{{ eleHeight }}px;" scroll-top="10" enable-back-to-top="true">
+                <view class="recommend_hot_box" wx:for="{{ options }}">
+                  <view class="nav_left_items iconfont {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{ index }}" data-id="{{item.id}}">
+                    {{ item.tree.name }}
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+
+            <!--右侧栏-->
+            <view class="nav_right">
+              <scroll-view class="recommend_scroll_x_box" scroll-y style="height:{{ eleHeight }}px;" scroll-top="10" enable-back-to-top="true">
+                <!--如果有数据，才遍历项-->
+                <view wx:if="{{ options[curIndex].tree.nodes }}" style="padding-bottom: 20px">
+                  <!-- navRightItems[curIndex].tree.nodes[1].tree.nodes -->
+                  <block wx:for="{{ options[curIndex].tree.nodes }}">
+                    <view class="nav_right_items">
+                      <!-- <navigator url="../list/index?brand={{item.tree.id}}&typeid={{navRightItems[curIndex].id}}"> -->
+                      <view class="nav_main">
+                        <view class="shotcut" bindtap="shopChonseOK" data-money="{{ item.tree.price }}" data-id="{{ item.tree.id }}" data-img="{{ item.tree.logo }}" data-name="{{ item.tree.title }}" data-guige="{{ item.tree.guige }}">
+                          <image src="{{ item.tree.logo }}" style="width: 100%;height: 100%;"></image>
+                        </view>
+                        <view class="shotcut-body">
+                          <view class="shotcut-title f28">
+                            <text>{{ item.tree.title }}</text>
+                          </view>
+                          <view class="shotcut-key">
+                            <text>月售 200份</text>
+                            <text style="margin-left: 10px;">好评 102</text>
+                          </view>
+                          <view class="shotcut-money">
+                            <label>￥{{ item.tree.price }}</label>
+                          </view>
+                          <view class="num-counter">
+                            <view class="btns fl {{ minusStatus }}" style="border-right: 1px solid #ccc;" bindtap="removeNumber" data-index="{{ index }}">-</view>
+                            <input type="number" class="addnumber fl" value="{{ item.tree.num }}" bindtap="bindManual" data-index="{{ index }}" />
+                            <view class="btns fr" style="border-left: 1px solid #ccc;" bindtap="addNumber" data-index="{{ index }}" data-id="{{ item.tree.id }}"> + </view>
+                          </view>
+                        </view>
+                      </view>
+                      <!-- </navigator> -->
+                    </view>
+                  </block>
+                </view>
+                <!--如果无数据，则显示数据-->
+                <view style="height:{{ eleHeight }}px;text-align:center;line-height:{{ eleHeight }}px;" wx:else>暂无数据</view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+
+      <swiper-item>
+        <view class="{{ selected_is ? 'show' : 'hidden' }}">
+          31231
+        </view>
+      </swiper-item>
+    </swiper>
+
+
+  </view>
+
+  <!-- confirm start -->
+  <view class="confirm" style="height: {{ footHeight }}px">
+    <view class="allmoney">
+      <view class="group-cart">
+        <view class="add-number">0</view>
+        <label class="icon-icon iconfont"></label>
+      </view>
+      <label class="money">￥{{ moneyCount }}</label>
+    </view>
+    <button class="chonseok" bindtap="chonseOK">我已选好</button>
+  </view>
+  <!-- confirm end -->
+
+</view>
+
+<!-- 弹出层 -->
+<view class="domStyle" bindtap="goVisible" hidden="{{ popupVisible }}"></view>
+<view class="popup" style="left: {{ winLeft }}px; top: {{ winTop }}px" hidden="{{ popupVisible }}">
+  <view class="popup-image">
+    <image src="{{ mainOption.img }}" style="width: 100%;height: 100%;" />
+    <view class="iconfont icon-cha" bindtap="goVisible"></view>
+  </view>
+  <view class="popup-title">{{ mainOption.name }}</view>
+
+  <view class="popupo-guige" wx:if="{{ mainOption.guige === '' }}">
+    <view class="guige-list">暂时没有规格</view>
+  </view>
+  <view class="popupo-guige" wx:else>
+    <text class="popup-head">规格：</text>
+    <view style="margin: 0px 0px 33px">
+      <view wx:for="{{ mainOption.guige }}" class="guige-list">{{ item.name }}</view>
+    </view>
+  </view>
+  <view class="popup-money">
+    <label class="storageMoney fl">￥{{ mainOption.price }}</label>
+    <button class="chonsesOK fr" bindtap="okGoSubmit" data-image="{{ mainOption.img }}" data-name="{{ mainOption.name }}" data-money="{{ mainOption.price }}" data-id="{{ mainOption.id }}">已选好了</button>
+  </view>
+</view>
+<!-- 弹出层 -->
