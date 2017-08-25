@@ -1,25 +1,28 @@
 <!--order.wxml-->
 <view class="wrapper">
   <view class="card-box">
-    <view bindtap="goOrderPage">
-      <view class="mid-line">
-        <view class="imgs fl">
-          <image src="../../images/banner/banner.png" style="width: 100%;height: 100%;"></image>
+    <navigator url="../ordermsg/ordermsg" open-type="navigate" hover-class="cardBoxHover">
+      <view>
+        <view class="mid-line">
+          <view class="imgs fl">
+            <image src="../../images/banner/banner.png" style="width: 100%;height: 100%;"></image>
+          </view>
+          <view class="card-text fl f30">xxx餐饮店名称</view>
+          <view class="status fr f30">待发货</view>
         </view>
-        <view class="card-text fl f30">xxx餐饮店名称</view>
-        <view class="status fr f30">待发货</view>
-      </view>
-      <view class="card-list both">
-        <label class="fl f30 cardMessage">榨菜肉丝饭</label>
-        <label class="fr f30">x1</label>
-      </view>
-      <view class="bl-wrapper">
-        <view class="line f30 fr">
-          <text>共1件商品</text>
-          <text>实付 ￥36</text>
+        <view class="card-list both">
+          <label class="fl f30 cardMessage">榨菜肉丝饭</label>
+          <label class="fr f30">x1</label>
+        </view>
+        <view class="bl-wrapper">
+          <view class="line f30 fr">
+            <text>共1件商品</text>
+            <text>实付 ￥36</text>
+          </view>
         </view>
       </view>
-    </view>
+    </navigator>
+
     <view class="card-footer">
       <view class="cardPay f30 fr">再来一单</view>
     </view>

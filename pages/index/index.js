@@ -279,7 +279,6 @@ Page({
   //  数量递增
   addNumber: function (e) {
     var that = this, num = that.data.thisNumber
-
     let data = e.currentTarget.dataset,
       index = data.index,
       id = data.id,
@@ -290,10 +289,10 @@ Page({
       list.num += 1;
     }
     console.log(list.num);
-    return;
     that.setData({
-      options: list.num,
+      // options: list.num,
     });
+    
   },
 
   //  递减数量
@@ -316,6 +315,17 @@ Page({
 
     that.setData({
       num: num,
+    });
+  },
+
+  /**
+   * 总价 = 选中的商品1的 价格 * 数量 + 选中的商品2的 价格 * 数量 + ...
+   */
+  getTotalPrice: function() {
+    const that = this;
+
+    that.setData({
+      moneyCount: 12,
     });
   },
 
@@ -384,7 +394,7 @@ Page({
   },
 
   goSearchPage: function () {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../search/search',
     })
   },

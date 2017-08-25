@@ -318,7 +318,7 @@
   right: 0px;
   padding: 5px 5px 0px 0px;
   font-size: 30px;
-  color: #fff;
+  color: #999;
   border-radius: 0px 5px 0px 0px;
 }
 
@@ -388,4 +388,10 @@
 
 .hidden {
   display: none;
+}
+
+
+.nothing-con {
+  text-align: center;
+  line-height: 250px;
 }

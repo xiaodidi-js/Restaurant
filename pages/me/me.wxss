@@ -10,13 +10,14 @@
 }
 
 .psonImage {
-  width: 85px;
+  width: 65px;
   height: 65px;
   margin: 0px auto;
   position: absolute;
   top: 30px;
   left: 0px;
   right: 0px;
+  border-radius: 100%;
 }
 
 .psonName {

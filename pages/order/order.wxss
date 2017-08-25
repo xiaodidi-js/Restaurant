@@ -14,6 +14,10 @@
   padding: 0px 10px;
 }
 
+.wrapper .card-box .cardBoxHover {
+  background: #fff;
+}
+
 .wrapper .card-box .card-list {
   width: 100%;
   height: 30px;

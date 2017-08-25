@@ -7,7 +7,7 @@
     </view>
     <view class="select-method sel-address">
 
-      <view class="words f28">
+      <view class="words f28" hidden="{{ wordsVisible_one }}">
         <view class="words-name">
           <text class="fl">{{ addressJson.region }}</text>
         </view>
@@ -18,17 +18,23 @@
         </view>
         <image src="../../images/line.png"></image>
       </view>
-      <view class="thisMessage f24">
+
+      <view class="thisMessage f24" hidden="{{ wordsVisible_one }}">
         <view>你的订餐将为在40分钟内送到，如果40分钟内未能送到</view>
         <text>请致电：</text>
         <text bindtap="callMe">{{ phoneNumber }}</text>
       </view>
 
-      <view class="iconfont add-address f28">
+      <view class="iconfont add-address f28" hidden="{{ wordsVisible_two }}">
         <text style="font-family: 'Microsoft YaHei';">还没添加配送地址</text>
         <text class="setup" bindtap="goSeting">点我设置</text>
         <image src="../../images/line.png"></image>
       </view>
+    </view>
+
+    <view class="select-method remarks-box">
+      <view class="remarks-title f30">备注：</view>
+      <textarea class="remarks-area" />
     </view>
 
     <view class="select-method card-box">
@@ -61,10 +67,7 @@
       </view>
     </view>
 
-    <view class="select-method remarks-box">
-      <view class="remarks-title f30">备注：</view>
-      <textarea class="remarks-area" />
-    </view>
+    
 
     <view class="orderNumber">
       <view class="words-con f28 nextOrder">

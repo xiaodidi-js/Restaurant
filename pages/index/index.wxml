@@ -1,4 +1,3 @@
-<!-- <wxs src='index.wxs' module='tools' /> -->
 
 <!--index.wxml-->
 <view class="container">
@@ -84,7 +83,7 @@
 
       <swiper-item>
         <view class="{{ selected_is ? 'show' : 'hidden' }}">
-          31231
+          <view class="nothing-con">暂时没有内容!</view>
         </view>
       </swiper-item>
     </swiper>
@@ -127,7 +126,11 @@
   </view>
   <view class="popup-money">
     <label class="storageMoney fl">￥{{ mainOption.price }}</label>
-    <button class="chonsesOK fr" bindtap="okGoSubmit" data-image="{{ mainOption.img }}" data-name="{{ mainOption.name }}" data-money="{{ mainOption.price }}" data-id="{{ mainOption.id }}">已选好了</button>
+    <button class="chonsesOK fr" bindtap="okGoSubmit" 
+            data-image="{{ mainOption.img }}" 
+            data-name="{{ mainOption.name }}" 
+            data-money="{{ mainOption.price }}" 
+            data-id="{{ mainOption.id }}">已选好了</button>
   </view>
 </view>
 <!-- 弹出层 -->

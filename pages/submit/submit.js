@@ -12,6 +12,8 @@ Page({
     ideapop: true,  //  扫码弹出层
     addressJson: [],
     list: [],
+    wordsVisible_one: true,
+    wordsVisible_two: false,
   },
 
   /**
@@ -28,10 +30,24 @@ Page({
    * 提交订单
    */
   goPay: function () {
+
+    var listAddress = wx.getStorageSync('addressKey');
+    var listShop = wx.getStorageSync('chonseShop');
+    console.log(listAddress,listShop);
+
+    var options = {
+      address: listAddress,
+      commodity: listShop
+    };
+    console.log(options);
+
+    //  存储订单
+    wx.setStorageSync("submitOrder", options);
+
     var that = this;
-    that.setData({
-      
-    });
+    wx.switchTab({
+      url: '../order/order',
+    })
   },
 
   goSeting: function() {
@@ -55,6 +71,20 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+
+    wx.getStorageSync('addressKey');
+    if (wx.getStorageSync('addressKey') !== '') {
+      that.setData({
+        wordsVisible_one: false,
+        wordsVisible_two: true,
+      });
+    } else {
+      that.setData({
+        wordsVisible_one: true,
+        wordsVisible_two: false,
+      });
+    }
+
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -63,8 +93,6 @@ Page({
         console.log()
       },
     });
-
-    
 
     that.setData({
       addressJson: wx.getStorageSync('addressKey'),

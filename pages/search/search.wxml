@@ -17,11 +17,13 @@
   <view class="both shopList">
     <view class="f30">推荐美食</view>
     <scroll-view class="recommend_scroll_x_box" scroll-x="true" scroll-top="10" enable-back-to-top="true" style="margin-top: 25px;white-space: nowrap; display: flex">
-
+      
       <view class="shopList-main" wx:for="list">
-        <view class="shopImage">
+        <navigator url="../ordermsg/ordermsg" open-type="navigate" hover-class="shopListHover">
+        <view class="shopImage" bindtap="goIndex">
           <image src="../../images/banner/banner.png" style="width: 100%;height: 100%;"></image>
         </view>
+        </navigator>
         <view class="shopName f24">
           <text>榨菜肉丝饭</text>
         </view>

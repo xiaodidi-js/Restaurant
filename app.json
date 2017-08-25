@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
     "pages/submit/submit",
     "pages/address/address",
-    "pages/search/search",
     "pages/order/order",
     "pages/ordermsg/ordermsg",
     "pages/me/me",
@@ -24,7 +24,7 @@
     "selectedColor": "#ff8023",
     "list": [
       {
-        "pagePath": "pages/order/order",
+        "pagePath": "pages/search/search",
         "iconPath": "images/tabBar/img1.png",
         "text": "主页",
         "selectedIconPath": "images/tabBar/img1-1.png"

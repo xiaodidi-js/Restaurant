@@ -13,13 +13,14 @@
 }
 
 .submit-body .submit-main .select-method {
-  width: 94%;
+  /* width: 95%; */
   background: #fff;
   padding: 0px 10px;
   clear: both;
   position: relative;
   top: 10px;
   margin-bottom: 10px;
+  z-index: 1;
 }
 
 .submit-body .submit-main .header-bold {
@@ -29,39 +30,48 @@
 }
 
 .submit-body .submit-main .sel-address {
-  height: 64px;
+  height: 100%;
   line-height: 64px;
   text-align: center;
+  background: none;
+  padding: 0px;
+  width: 100%;
 }
 
 .submit-body .submit-main .words {
   width: 100%;
   height: 64px;
   position: relative;
+  background: #fff;
 }
 
 .submit-body .submit-main .words .words-name {
-  width: 100%;
+  /* width: 100%; */
   height: 30px;
+  padding-left: 10px;
 }
 
 .submit-body .submit-main .words .words-con {
-  width: 100%;
+  /* width: 100%; */
   height: 30px;
   clear: both;
   line-height: 30px;
   text-align: left;
   color: #9fa0a0;
+  padding: 0px 10px;
 }
 
 .submit-body .submit-main .thisMessage {
   color: #ffb37b;
-  width: 93%;
+  width: 94%;
   height: auto;
   background: #fff;
   padding: 10px 10px;
   position: relative;
-  top: 10px;
+  line-height: 20px;
+  text-align: left;
+  top: 7px;
+  margin: 5px 0px;
 }
 
 .submit-body .submit-main .words .words-con text {
@@ -85,6 +95,7 @@
   color: #595757;
   font-family: 'microsoft yahei';
   position: relative;
+  background: #fff;
 }
 
 .submit-body .submit-main .sel-address .add-address::before {
@@ -166,9 +177,14 @@
 }
 
 .submit-body .submit-main .remarks-box .remarks-area {
-  height: 60px;
+  height: 55px;
   min-height: auto;
-  width: 100%;
+  width: 93%;
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
 }
 
 .submit-body .orderNumber {
@@ -213,7 +229,7 @@
   height: 44.5px;
   width: 100%;
   background: #fff;
-  z-index: 10;
+  z-index: 50;
 }
 
 .payConfirm .wait-money {
@@ -221,6 +237,7 @@
   line-height: 44.5px;
   padding-left: 6%;
   border-top: 1px solid #dedede;
+  background: #fff;
 }
 
 .payConfirm .goPay {
@@ -241,8 +258,9 @@
   position: fixed;
   bottom: 0px;
   left: 0px;
-  z-index: 12;
+  z-index: 100;
   width: 100%;
+  background: #fff;
 }
 
 .freepop .ul-list {
@@ -250,6 +268,8 @@
   text-align: center;
   color: #595757;
   background: #fff;
+  z-index: 100;
+  transform: translateZ(0);
 }
 
 .freepop .ul-list .li-list {

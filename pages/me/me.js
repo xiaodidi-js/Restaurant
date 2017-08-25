@@ -8,7 +8,9 @@ Page({
     aiphone: '0757-800-20',
     domShow: true,
     confirmHeight: 0,
-    popoH1: '是否退出登录'
+    popoH1: '是否退出登录',
+    nickName: '', //  名称
+    avatarUrl: '',  // 头像
   },
 
   /**
@@ -16,6 +18,24 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+
+    wx.getUserInfo({
+      success: function(res) {
+        var userInfo = res.userInfo
+        var nickName = userInfo.nickName
+        var avatarUrl = userInfo.avatarUrl
+        var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        var province = userInfo.province
+        var city = userInfo.city
+        var country = userInfo.country
+        console.log(userInfo, nickName, avatarUrl, gender, province, city, country);
+        that.setData({
+          nickName: userInfo.nickName,
+          avatarUrl: userInfo.avatarUrl,
+        });
+      }
+    })
+
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -45,7 +65,7 @@ Page({
    * 跳转页面
    */
   goOrder: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../order/order',
     })
   },

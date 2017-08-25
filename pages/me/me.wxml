@@ -4,9 +4,9 @@
 <view class="person-main">
   <view class="person-header">
     <view class="psonImage">
-      <image src="../../images/1.png" style="width: 100%;height: 100%;"></image>
+      <image src="{{ avatarUrl }}" style="width: 100%;height: 100%;border-radius: 100%;"></image>
     </view>
-    <view class="psonName f24">小明</view>
+    <view class="psonName f24">{{ nickName }}</view>
   </view>
 </view>
 <!-- person-main end -->
